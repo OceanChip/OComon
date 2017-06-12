@@ -1,0 +1,17 @@
+C:\Users\oceanchip\Eabc.Common\RemoteingPerformanceTest.Client\obj\Debug\RemoteingPerformanceTest.Client.csprojResolveAssemblyReference.cache
+C:\Users\oceanchip\Eabc.Common\RemoteingPerformanceTest.Client\bin\Debug\RemoteingPerformanceTest.Client.exe.config
+C:\Users\oceanchip\Eabc.Common\RemoteingPerformanceTest.Client\bin\Debug\RemoteingPerformanceTest.Client.exe
+C:\Users\oceanchip\Eabc.Common\RemoteingPerformanceTest.Client\bin\Debug\RemoteingPerformanceTest.Client.pdb
+C:\Users\oceanchip\Eabc.Common\RemoteingPerformanceTest.Client\bin\Debug\OceanChip.Common.dll
+C:\Users\oceanchip\Eabc.Common\RemoteingPerformanceTest.Client\bin\Debug\Newtonsoft.Json.dll
+C:\Users\oceanchip\Eabc.Common\RemoteingPerformanceTest.Client\bin\Debug\Dapper.dll
+C:\Users\oceanchip\Eabc.Common\RemoteingPerformanceTest.Client\bin\Debug\log4net.dll
+C:\Users\oceanchip\Eabc.Common\RemoteingPerformanceTest.Client\bin\Debug\Autofac.dll
+C:\Users\oceanchip\Eabc.Common\RemoteingPerformanceTest.Client\bin\Debug\OceanChip.Common.pdb
+C:\Users\oceanchip\Eabc.Common\RemoteingPerformanceTest.Client\bin\Debug\Newtonsoft.Json.xml
+C:\Users\oceanchip\Eabc.Common\RemoteingPerformanceTest.Client\bin\Debug\Dapper.xml
+C:\Users\oceanchip\Eabc.Common\RemoteingPerformanceTest.Client\bin\Debug\log4net.xml
+C:\Users\oceanchip\Eabc.Common\RemoteingPerformanceTest.Client\bin\Debug\Autofac.xml
+C:\Users\oceanchip\Eabc.Common\RemoteingPerformanceTest.Client\obj\Debug\RemoteingPerformanceTest.Client.exe
+C:\Users\oceanchip\Eabc.Common\RemoteingPerformanceTest.Client\obj\Debug\RemoteingPerformanceTest.Client.pdb
+C:\Users\oceanchip\Eabc.Common\RemoteingPerformanceTest.Client\bin\Debug\log4net.config
