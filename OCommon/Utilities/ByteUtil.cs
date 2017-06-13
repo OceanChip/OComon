@@ -61,7 +61,7 @@ namespace OceanChip.Common.Utilities
             //var shortBytes = new byte[2];
             //Buffer.BlockCopy(sourceBuffer, startOffset, shortBytes, 0, 2);
             nextStartOffset = startOffset + 2;
-            return BitConverter.ToInt16(sourceBuffer, 2);
+            return BitConverter.ToInt16(sourceBuffer, startOffset);
         }
         /// <summary>
         /// 获取32位整型 （偏移量+4）
@@ -76,7 +76,7 @@ namespace OceanChip.Common.Utilities
             //Buffer.BlockCopy(sourceBuffer, startOffset, inBytes, 0, 4);
             nextStartOffset =startOffset+ 4;
 
-            return BitConverter.ToInt32(sourceBuffer, 4);
+            return BitConverter.ToInt32(sourceBuffer,startOffset);
         }
         /// <summary>
         /// 获取64位整型 （偏移量+8）
@@ -88,7 +88,7 @@ namespace OceanChip.Common.Utilities
         public static long DecodeLong(byte[] sourceBuffer, int startOffset, out int nextStartOffset)
         {
             nextStartOffset = startOffset + 8;
-            return BitConverter.ToInt64(sourceBuffer, 8);
+            return BitConverter.ToInt64(sourceBuffer, startOffset);
         }
         /// <summary>
         /// 获取时间（偏移量+8）
@@ -100,7 +100,7 @@ namespace OceanChip.Common.Utilities
         public static DateTime DecodeDateTime(byte[] sourceBuffer, int startOffset, out int nextStartOffset)
         {
             nextStartOffset = startOffset + 8;
-            return new DateTime(BitConverter.ToInt32(sourceBuffer, startOffset));
+            return new DateTime(BitConverter.ToInt64(sourceBuffer, startOffset));
         }
         /// <summary>
         /// 加密字符串

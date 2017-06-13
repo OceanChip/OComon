@@ -23,3 +23,16 @@ C:\Users\oceanchip\Eabc.Common\OCommon\bin\Debug\Newtonsoft.Json.xml
 C:\Users\oceanchip\Eabc.Common\OCommon\obj\Debug\OceanChip.Common.csprojResolveAssemblyReference.cache
 C:\Users\oceanchip\Eabc.Common\OCommon\obj\Debug\OceanChip.Common.dll
 C:\Users\oceanchip\Eabc.Common\OCommon\obj\Debug\OceanChip.Common.pdb
+G:\Project\OComon\OCommon\bin\Debug\OceanChip.Common.dll
+G:\Project\OComon\OCommon\bin\Debug\OceanChip.Common.pdb
+G:\Project\OComon\OCommon\bin\Debug\Autofac.dll
+G:\Project\OComon\OCommon\bin\Debug\Dapper.dll
+G:\Project\OComon\OCommon\bin\Debug\log4net.dll
+G:\Project\OComon\OCommon\bin\Debug\Newtonsoft.Json.dll
+G:\Project\OComon\OCommon\bin\Debug\Autofac.xml
+G:\Project\OComon\OCommon\bin\Debug\Dapper.xml
+G:\Project\OComon\OCommon\bin\Debug\log4net.xml
+G:\Project\OComon\OCommon\bin\Debug\Newtonsoft.Json.xml
+G:\Project\OComon\OCommon\obj\Debug\OceanChip.Common.csprojResolveAssemblyReference.cache
+G:\Project\OComon\OCommon\obj\Debug\OceanChip.Common.dll
+G:\Project\OComon\OCommon\obj\Debug\OceanChip.Common.pdb
