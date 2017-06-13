@@ -47,7 +47,7 @@ namespace OceanChip.Common.Utilities
         }
         public ObjectId(byte[] bytes)
         {
-            Ensure.NotNull(bytes, nameof(bytes));
+            Check.NotNull(bytes, nameof(bytes));
 
             UnPack(bytes, out _timestamp, out _machine, out _pid, out _increment);
         }
@@ -87,7 +87,7 @@ namespace OceanChip.Common.Utilities
         }
         public ObjectId(string value)
         {
-            Ensure.NotNull(value, nameof(value));
+            Check.NotNull(value, nameof(value));
 
             UnPack(ParseHexString(value), out _timestamp, out _machine, out _pid, out _increment);
         }
@@ -183,7 +183,7 @@ namespace OceanChip.Common.Utilities
         }
         public static ObjectId Parse(string s)
         {
-            Ensure.NotNull(s, nameof(s));
+            Check.NotNull(s, nameof(s));
 
             if (s.Length != 24)
                 throw new ArgumentOutOfRangeException("s", "ObjectId字符串长度必须为24位");
@@ -192,7 +192,7 @@ namespace OceanChip.Common.Utilities
         }
         public static byte[] ParseHexString(string value)
         {
-            Ensure.NotNull(value, nameof(value));
+            Check.NotNull(value, nameof(value));
             if (value.Length % 2 == 1)
                 throw new ArgumentException("value的长度必须为偶数");
 
@@ -219,7 +219,7 @@ namespace OceanChip.Common.Utilities
 
         public static void UnPack(byte[] bytes, out int timestamp, out int machine, out short pid, out int increment)
         {
-            Ensure.NotNull(bytes, nameof(bytes));
+            Check.NotNull(bytes, nameof(bytes));
 
             if (bytes.Length != 12)
                 throw new ArgumentOutOfRangeException("bytes", "数组长度必须为12");
@@ -277,7 +277,7 @@ namespace OceanChip.Common.Utilities
 
         private string ToHexString(byte[] bytes)
         {
-            Ensure.NotNull(bytes, nameof(bytes));
+            Check.NotNull(bytes, nameof(bytes));
 
             var result = new char[bytes.Length * 2];
             for(int i = 0; i < bytes.Length; i++)

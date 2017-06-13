@@ -80,9 +80,9 @@ namespace OceanChip.Common.Storage
 #region 构造函数 析构函数
         private Chunk(string fileName,ChunkManager manager,ChunkManagerConfig config,bool isMemoryChunk)
         {
-            Ensure.NotNullOrEmpty(fileName, nameof(fileName));
-            Ensure.NotNull(manager, nameof(manager));
-            Ensure.NotNull(config, nameof(config));
+            Check.NotNullOrEmpty(fileName, nameof(fileName));
+            Check.NotNull(manager, nameof(manager));
+            Check.NotNull(config, nameof(config));
 
             _fileName = fileName;
             _chunkManager = manager;

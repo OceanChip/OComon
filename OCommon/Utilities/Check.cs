@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace OceanChip.Common.Utilities
 {
-    public static class Ensure
+    public static class Check
     {
         public static void NotNull<T>(T argument,string argumentName)where T : class
         {

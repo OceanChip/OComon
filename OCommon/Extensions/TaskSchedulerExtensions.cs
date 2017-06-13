@@ -12,9 +12,9 @@ namespace OceanChip.Common.Extensions
     {
         public static Task StartDelayedTask(this TaskFactory factory,int milisecondsDelay,Action action)
         {
-            Ensure.NotNull(factory, nameof(factory));
-            Ensure.Nonnegative(milisecondsDelay, nameof(milisecondsDelay));
-            Ensure.NotNull(action, nameof(action));
+            Check.NotNull(factory, nameof(factory));
+            Check.Nonnegative(milisecondsDelay, nameof(milisecondsDelay));
+            Check.NotNull(action, nameof(action));
 
             if (factory.CancellationToken.IsCancellationRequested)
             {

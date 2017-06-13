@@ -33,9 +33,9 @@ namespace OceanChip.Common.Utilities
         public static void UpdateObject<TTarget,TSource>(TTarget target,TSource source,params Expression<Func<TSource,object>>[] propertyExpressionsFromSource)
             where TTarget:class where TSource:class
         {
-            Ensure.NotNull(target, nameof(target));
-            Ensure.NotNull(source, nameof(source));
-            Ensure.NotNull(propertyExpressionsFromSource, nameof(propertyExpressionsFromSource));
+            Check.NotNull(target, nameof(target));
+            Check.NotNull(source, nameof(source));
+            Check.NotNull(propertyExpressionsFromSource, nameof(propertyExpressionsFromSource));
 
             var properties = target.GetType().GetProperties();
 

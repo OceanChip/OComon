@@ -12,8 +12,8 @@ namespace OceanChip.Common.Extensions
     {
         public static void AtomRead(this ReaderWriterLockSlim readerwriterSlim, Action action)
         {
-            Ensure.NotNull(readerwriterSlim, nameof(readerwriterSlim));
-            Ensure.NotNull(action, nameof(action));
+            Check.NotNull(readerwriterSlim, nameof(readerwriterSlim));
+            Check.NotNull(action, nameof(action));
 
             readerwriterSlim.EnterReadLock();
             try
@@ -27,8 +27,8 @@ namespace OceanChip.Common.Extensions
         }
         public static T AtomRead<T>(this ReaderWriterLockSlim readerwriterSlim, Func<T> function)
         {
-            Ensure.NotNull(readerwriterSlim, nameof(readerwriterSlim));
-            Ensure.NotNull(function, nameof(function));
+            Check.NotNull(readerwriterSlim, nameof(readerwriterSlim));
+            Check.NotNull(function, nameof(function));
 
             readerwriterSlim.EnterReadLock();
             try
@@ -42,8 +42,8 @@ namespace OceanChip.Common.Extensions
         }
         public static void AtomWriter(this ReaderWriterLockSlim readerwriterSlim, Action action)
         {
-            Ensure.NotNull(readerwriterSlim, nameof(readerwriterSlim));
-            Ensure.NotNull(action, nameof(action));
+            Check.NotNull(readerwriterSlim, nameof(readerwriterSlim));
+            Check.NotNull(action, nameof(action));
 
             readerwriterSlim.EnterWriteLock();
             try
@@ -57,8 +57,8 @@ namespace OceanChip.Common.Extensions
         }
         public static T AtomWriter<T>(this ReaderWriterLockSlim readerwriterSlim, Func<T> function)
         {
-            Ensure.NotNull(readerwriterSlim, nameof(readerwriterSlim));
-            Ensure.NotNull(function, nameof(function));
+            Check.NotNull(readerwriterSlim, nameof(readerwriterSlim));
+            Check.NotNull(function, nameof(function));
 
             readerwriterSlim.EnterWriteLock();
             try

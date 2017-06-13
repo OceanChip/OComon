@@ -12,12 +12,12 @@ namespace OceanChip.Common.Extensions
     {
         public static string ToAddress(this EndPoint endPoint)
         {
-            Ensure.NotNull(endPoint, nameof(endPoint));
+            Check.NotNull(endPoint, nameof(endPoint));
             return ((IPEndPoint)endPoint).ToAddress();
         }
         public static string ToAddress(this IPEndPoint endPoint)
         {
-            Ensure.NotNull(endPoint, nameof(endPoint));
+            Check.NotNull(endPoint, nameof(endPoint));
             return $"{endPoint.Address}:{endPoint.Port}";
         }
         /// <summary>
@@ -28,7 +28,7 @@ namespace OceanChip.Common.Extensions
         /// <returns></returns>
         public static IPEndPoint ToEndPoint(this string address)
         {
-            Ensure.NotNull(address, nameof(address));
+            Check.NotNull(address, nameof(address));
             var array = address.Split(new string[] { ":" }, StringSplitOptions.RemoveEmptyEntries);
             if (array.Length != 2)
                 throw new Exception("无效地址:" + address);
@@ -45,7 +45,7 @@ namespace OceanChip.Common.Extensions
         /// <returns></returns>
         public static IEnumerable<IPEndPoint> ToEndPoints(this string address)
         {
-            Ensure.NotNull(address, nameof(address));
+            Check.NotNull(address, nameof(address));
             var array = address.Split(new string[] { "," }, StringSplitOptions.RemoveEmptyEntries);
             var list = new List<IPEndPoint>();
             foreach(var item in array)

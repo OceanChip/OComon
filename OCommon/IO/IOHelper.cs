@@ -21,18 +21,18 @@ namespace OceanChip.Common.IO
 
         public void TryIOAction(string actionName,Func<string> getContext,Action action,int maxRetryTimes,bool continueRetryWhenRetryFailed=false,int retryInterval=1000)
         {
-            Ensure.NotNull(actionName, nameof(actionName));
-            Ensure.NotNull(getContext, nameof(getContext));
-            Ensure.NotNull(action, nameof(action));
+            Check.NotNull(actionName, nameof(actionName));
+            Check.NotNull(getContext, nameof(getContext));
+            Check.NotNull(action, nameof(action));
             TryIOActionRecursivelyInternal(actionName, getContext, (x, y, z) => action(), 0, maxRetryTimes, continueRetryWhenRetryFailed, retryInterval);
         }
 
 
         public T TryIOFunc<T>(string funcName,Func<string> getContent,Func<T> func,int maxRetryTimes, bool continueRetryWhenRetryFailed = false, int retryInterval = 1000)
         {
-            Ensure.NotNull(funcName, nameof(funcName));
-            Ensure.NotNull(getContent, nameof(getContent));
-            Ensure.NotNull(func, nameof(func));
+            Check.NotNull(funcName, nameof(funcName));
+            Check.NotNull(getContent, nameof(getContent));
+            Check.NotNull(func, nameof(func));
             return TryIOFuncRecursivelyInternal(funcName, getContent, (x, y, DivideByZeroException) => func(), 0, maxRetryTimes, continueRetryWhenRetryFailed, retryInterval);
         }
         public void TryAsyncActionRecursively<TAsyncResult>(
@@ -79,8 +79,8 @@ namespace OceanChip.Common.IO
         }
         public void TryIOAction(Action action,string actionName)
         {
-            Ensure.NotNull(action, nameof(action));
-            Ensure.NotNull(actionName, nameof(actionName));
+            Check.NotNull(action, nameof(action));
+            Check.NotNull(actionName, nameof(actionName));
 
             try
             {
@@ -96,8 +96,8 @@ namespace OceanChip.Common.IO
         }
         public Task TryIOActionAsync(Func<Task> action, string actionName)
         {
-            Ensure.NotNull(action, nameof(action));
-            Ensure.NotNull(actionName, nameof(actionName));
+            Check.NotNull(action, nameof(action));
+            Check.NotNull(actionName, nameof(actionName));
 
             try
             {
@@ -114,8 +114,8 @@ namespace OceanChip.Common.IO
         }
         public T TryIOFunc<T>(Func<T> func, string funName)
         {
-            Ensure.NotNull(func, nameof(func));
-            Ensure.NotNull(funName, nameof(funName));
+            Check.NotNull(func, nameof(func));
+            Check.NotNull(funName, nameof(funName));
 
             try
             {
@@ -132,8 +132,8 @@ namespace OceanChip.Common.IO
         }
         public Task<T> TryIOFunc<T>(Func<Task<T>> func, string funName)
         {
-            Ensure.NotNull(func, nameof(func));
-            Ensure.NotNull(funName, nameof(funName));
+            Check.NotNull(func, nameof(func));
+            Check.NotNull(funName, nameof(funName));
 
             try
             {

@@ -24,8 +24,8 @@ namespace OceanChip.Common.Utilities
         /// <exception cref="ArgumentOutOfRangeException"></exception>
         public static D CreateDelegate<D>(MethodInfo methodInfo,Type[] parameterTypes)where D : class
         {
-            Ensure.NotNull(methodInfo, nameof(methodInfo));
-            Ensure.NotNull(parameterTypes, nameof(parameterTypes));
+            Check.NotNull(methodInfo, nameof(methodInfo));
+            Check.NotNull(parameterTypes, nameof(parameterTypes));
 
             var parameters = methodInfo.GetParameters();
             if(parameters?.Length > parameterTypes.Length)

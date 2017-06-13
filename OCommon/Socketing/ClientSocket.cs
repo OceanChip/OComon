@@ -31,10 +31,10 @@ namespace OceanChip.Common.Socketing
         public TcpConnection Connection => _connection;
         public ClientSocket(EndPoint serverEndPoint,EndPoint localEndPoint,SocketSetting setting,IBufferPool receiveDataBufferPool,Action<ITcpConnection,byte[]> messageArrivedHandler)
         {
-            Ensure.NotNull(serverEndPoint, nameof(serverEndPoint));
-            Ensure.NotNull(setting, nameof(setting));
-            Ensure.NotNull(receiveDataBufferPool, nameof(receiveDataBufferPool));
-            Ensure.NotNull(messageArrivedHandler, nameof(messageArrivedHandler));
+            Check.NotNull(serverEndPoint, nameof(serverEndPoint));
+            Check.NotNull(setting, nameof(setting));
+            Check.NotNull(receiveDataBufferPool, nameof(receiveDataBufferPool));
+            Check.NotNull(messageArrivedHandler, nameof(messageArrivedHandler));
 
             _connectionEventListeners = new List<IConnectionEventListener>();
 

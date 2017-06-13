@@ -24,7 +24,7 @@ namespace OceanChip.Common.Storage
 
         public ChunkWriter(ChunkManager manager)
         {
-            Ensure.NotNull(manager, nameof(manager));
+            Check.NotNull(manager, nameof(manager));
 
             this._chunkManager = manager;
             this._scheduleService = ObjectContainer.Resolve<IScheduleService>();

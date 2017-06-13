@@ -29,14 +29,14 @@ namespace OceanChip.Common.Socketing.Framing
 
         public void RegisterMessageArrivalCallback(Action<ArraySegment<byte>> handler)
         {
-            Ensure.NotNull(handler, nameof(handler));
+            Check.NotNull(handler, nameof(handler));
 
             _receiveHandler = handler;
         }
 
         public void UnFrameData(IEnumerable<ArraySegment<byte>> data)
         {
-            Ensure.NotNull(data, nameof(data));
+            Check.NotNull(data, nameof(data));
 
             foreach(ArraySegment<byte> item in data)
             {

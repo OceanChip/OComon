@@ -100,20 +100,20 @@ namespace OceanChip.Common.Storage
                                int chunkLocalCacheSize,
                                bool enableChunkStatistic)
         {
-            Ensure.NotNullOrEmpty(basePath, "basePath");
-            Ensure.NotNull(fileNamingStrategy, "fileNamingStrategy");
-            Ensure.Nonnegative(chunkDataSize, "chunkDataSize");
-            Ensure.Nonnegative(chunkDataUnitSize, "chunkDataUnitSize");
-            Ensure.Nonnegative(chunkDataCount, "chunkDataCount");
-            Ensure.Positive(flushChunkIntervalMilliseconds, "flushChunkIntervalMilliseconds");
-            Ensure.Positive(maxLogRecordSize, "maxLogRecordSize");
-            Ensure.Positive(chunkWriteBuffer, "chunkWriteBuffer");
-            Ensure.Positive(chunkReadBuffer, "chunkReadBuffer");
-            Ensure.Positive(chunkCacheMaxPercent, "chunkCacheMaxPercent");
-            Ensure.Positive(chunkCacheMinPercent, "chunkCacheMinPercent");
-            Ensure.Nonnegative(preCacheChunkCount, "preCacheChunkCount");
-            Ensure.Nonnegative(chunkInactiveTimeMaxSeconds, "chunkInactiveTimeMaxSeconds");
-            Ensure.Positive(chunkLocalCacheSize, "chunkLocalCacheSize");
+            Check.NotNullOrEmpty(basePath, "basePath");
+            Check.NotNull(fileNamingStrategy, "fileNamingStrategy");
+            Check.Nonnegative(chunkDataSize, "chunkDataSize");
+            Check.Nonnegative(chunkDataUnitSize, "chunkDataUnitSize");
+            Check.Nonnegative(chunkDataCount, "chunkDataCount");
+            Check.Positive(flushChunkIntervalMilliseconds, "flushChunkIntervalMilliseconds");
+            Check.Positive(maxLogRecordSize, "maxLogRecordSize");
+            Check.Positive(chunkWriteBuffer, "chunkWriteBuffer");
+            Check.Positive(chunkReadBuffer, "chunkReadBuffer");
+            Check.Positive(chunkCacheMaxPercent, "chunkCacheMaxPercent");
+            Check.Positive(chunkCacheMinPercent, "chunkCacheMinPercent");
+            Check.Nonnegative(preCacheChunkCount, "preCacheChunkCount");
+            Check.Nonnegative(chunkInactiveTimeMaxSeconds, "chunkInactiveTimeMaxSeconds");
+            Check.Positive(chunkLocalCacheSize, "chunkLocalCacheSize");
 
             if (chunkDataSize <= 0 && (chunkDataUnitSize <= 0 || chunkDataCount <= 0))
             {

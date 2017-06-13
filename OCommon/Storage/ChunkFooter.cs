@@ -15,7 +15,7 @@ namespace OceanChip.Common.Storage
 
         public ChunkFooter(int chunkDataTotalSize)
         {
-            Ensure.Nonnegative(chunkDataTotalSize, nameof(chunkDataTotalSize));
+            Check.Nonnegative(chunkDataTotalSize, nameof(chunkDataTotalSize));
 
             this.ChunkDataTotalSize = chunkDataTotalSize;
         }

@@ -50,7 +50,7 @@ namespace OceanChip.Common.Remoting
         }
         public SocketRemotingClient(EndPoint serverEndPoint,SocketSetting setting=null,EndPoint locklEndPoint = null)
         {
-            Ensure.NotNull(serverEndPoint, nameof(serverEndPoint));
+            Check.NotNull(serverEndPoint, nameof(serverEndPoint));
 
             this._serverEndPoint = serverEndPoint;
             this._localEndPoint = LocalEndPoint;

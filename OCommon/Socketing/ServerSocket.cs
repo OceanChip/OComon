@@ -26,10 +26,10 @@ namespace OceanChip.Common.Socketing
 
         public ServerSocket(IPEndPoint endpoint,SocketSetting setting,IBufferPool receiveDataBufferPool, Action<ITcpConnection, byte[], Action<byte[]>> messageArrivedHandler)
         {
-            Ensure.NotNull(endpoint, nameof(endpoint));
-            Ensure.NotNull(setting, nameof(setting));
-            Ensure.NotNull(receiveDataBufferPool, nameof(receiveDataBufferPool ));
-            Ensure.NotNull(messageArrivedHandler, nameof(messageArrivedHandler));
+            Check.NotNull(endpoint, nameof(endpoint));
+            Check.NotNull(setting, nameof(setting));
+            Check.NotNull(receiveDataBufferPool, nameof(receiveDataBufferPool ));
+            Check.NotNull(messageArrivedHandler, nameof(messageArrivedHandler));
 
             _listeningEndPoint = endpoint;
             _setting = setting;

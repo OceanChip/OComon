@@ -43,11 +43,11 @@ namespace OceanChip.Common.Socketing
 
         public TcpConnection(Socket socket,SocketSetting setting,IBufferPool receiveDataBufferPool,Action<ITcpConnection,byte[]> messageArrivalHandler,Action<ITcpConnection,SocketError> connectionCloseHandler)
         {
-            Ensure.NotNull(socket, nameof(socket));
-            Ensure.NotNull(setting, nameof(setting));
-            Ensure.NotNull(receiveDataBufferPool, nameof(receiveDataBufferPool));
-            Ensure.NotNull(messageArrivalHandler, nameof(messageArrivalHandler));
-            Ensure.NotNull(connectionCloseHandler, nameof(connectionCloseHandler));
+            Check.NotNull(socket, nameof(socket));
+            Check.NotNull(setting, nameof(setting));
+            Check.NotNull(receiveDataBufferPool, nameof(receiveDataBufferPool));
+            Check.NotNull(messageArrivalHandler, nameof(messageArrivalHandler));
+            Check.NotNull(connectionCloseHandler, nameof(connectionCloseHandler));
 
             _socket = socket;
             this._settings = setting;

@@ -62,8 +62,8 @@ namespace OceanChip.Common.Storage
 
         public ChunkManager(string name,ChunkManagerConfig config,bool isMemoryMode,string relativePath = null)
         {
-            Ensure.NotNull(name, nameof(name));
-            Ensure.NotNull(config, nameof(config));
+            Check.NotNull(name, nameof(name));
+            Check.NotNull(config, nameof(config));
 
             this.Name = name;
             _config = config;

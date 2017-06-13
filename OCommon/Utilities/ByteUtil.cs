@@ -109,7 +109,7 @@ namespace OceanChip.Common.Utilities
         /// <param name="startOffset">偏移起始位置</param>
         /// <param name="nextStartOffset">处理结束后的偏移位置</param>
         /// <returns>数据域</returns>
-        private static byte[] DecodeBytes(byte[] sourceBuffer, int startOffset, out int nextStartOffset)
+        public static byte[] DecodeBytes(byte[] sourceBuffer, int startOffset, out int nextStartOffset)
         {
             var lenghtBytes = new byte[4];
             Buffer.BlockCopy(sourceBuffer, startOffset, lenghtBytes, 0, 4);

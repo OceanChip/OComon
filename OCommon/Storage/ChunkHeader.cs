@@ -18,8 +18,8 @@ namespace OceanChip.Common.Storage
 
         public ChunkHeader(int chunkNumber,int chunkDataTotalSize)
         {
-            Ensure.Nonnegative(chunkNumber, nameof(chunkNumber));
-            Ensure.Positive(chunkDataTotalSize, nameof(chunkDataTotalSize));
+            Check.Nonnegative(chunkNumber, nameof(chunkNumber));
+            Check.Positive(chunkDataTotalSize, nameof(chunkDataTotalSize));
 
             ChunkNumber = chunkNumber;
             this.ChunkDataTotalSize = chunkDataTotalSize;

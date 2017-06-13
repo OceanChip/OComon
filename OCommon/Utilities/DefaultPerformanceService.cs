@@ -54,7 +54,7 @@ namespace OceanChip.Common.Utilities
 
         public IPerformanceService Initialize(string name, PerformanceServiceSetting setting = null)
         {
-            Ensure.NotNullOrEmpty(name, nameof(name));
+            Check.NotNullOrEmpty(name, nameof(name));
 
             if(setting == null)
             {
@@ -68,7 +68,7 @@ namespace OceanChip.Common.Utilities
             {
                 _setting = setting;
             }
-            Ensure.Positive(_setting.StatIntervalSeconds, "PerformanceServiceSetting.StatIntervalSeconds");
+            Check.Positive(_setting.StatIntervalSeconds, "PerformanceServiceSetting.StatIntervalSeconds");
 
             _name = name;
             _taskName = name + ".Task";

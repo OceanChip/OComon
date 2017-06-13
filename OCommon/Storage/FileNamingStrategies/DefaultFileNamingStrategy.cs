@@ -18,9 +18,9 @@ namespace OceanChip.Common.Storage.FileNamingStrategies
 
         public DefaultFileNamingStrategy(string prefix, string pattern = @"\d{6}", string format = "{0}{1:000000000")
         {
-            Ensure.NotNull(prefix, nameof(prefix));
-            Ensure.NotNull(pattern, nameof(pattern));
-            Ensure.NotNull(format, nameof(format));
+            Check.NotNull(prefix, nameof(prefix));
+            Check.NotNull(pattern, nameof(pattern));
+            Check.NotNull(format, nameof(format));
 
             _prefix = prefix;
             _pattern = pattern;
@@ -39,7 +39,7 @@ namespace OceanChip.Common.Storage.FileNamingStrategies
 
         public string GetFileNameFor(string path, int index)
         {
-            Ensure.Nonnegative(index, nameof(index));
+            Check.Nonnegative(index, nameof(index));
 
             return Path.Combine(path, string.Format(_format, _prefix, index));
         }
