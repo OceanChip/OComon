@@ -58,6 +58,5 @@ H:\项目\基础\OComon\OCommon\bin\Debug\Newtonsoft.Json.xml
 H:\项目\基础\OComon\OCommon\bin\Debug\Nito.AsyncEx.xml
 H:\项目\基础\OComon\OCommon\bin\Debug\Nito.AsyncEx.Concurrent.xml
 H:\项目\基础\OComon\OCommon\bin\Debug\Nito.AsyncEx.Enlightenment.xml
-H:\项目\基础\OComon\OCommon\obj\Debug\OceanChip.Common.csprojResolveAssemblyReference.cache
 H:\项目\基础\OComon\OCommon\obj\Debug\OceanChip.Common.dll
 H:\项目\基础\OComon\OCommon\obj\Debug\OceanChip.Common.pdb

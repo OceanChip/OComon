@@ -30,12 +30,12 @@ namespace OceanChip.Common.Utilities
         }
         public static void Nonnegative(long number,string argumentName)
         {
-            if (number <= 0)
+            if (number < 0)
                 throw new ArgumentOutOfRangeException(argumentName, argumentName + "必须大于等于0。");
         }
         public static void Nonnegative(int number, string argumentName)
         {
-            if (number <= 0)
+            if (number < 0)
                 throw new ArgumentOutOfRangeException(argumentName, argumentName + "必须大于等于0。");
         }
         /// <summary>

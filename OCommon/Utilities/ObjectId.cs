@@ -275,7 +275,7 @@ namespace OceanChip.Common.Utilities
             return ToHexString(ToByteArray());
         }
 
-        private string ToHexString(byte[] bytes)
+        public static string ToHexString(byte[] bytes)
         {
             Check.NotNull(bytes, nameof(bytes));
 

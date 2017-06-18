@@ -34,6 +34,11 @@ namespace OceanChip.Common.Utilities
               });
         }
 
+        public void RegisterClosingEventHandler(ControlEventHandler handler)
+        {
+            _closingEventHandler = handler;
+        }
+
         private static bool IsCloseEvent(int consoleEvent)
         {
             if((consoleEvent==(int)ConsoleEvent.CtrlC && !Console.TreatControlCAsInput)

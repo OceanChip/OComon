@@ -19,7 +19,7 @@ namespace OceanChip.Common.Configurations
             ObjectContainer.SetContainer(new AutofacObjectContainer(builder));
             return configuration;
         }
-        public static Configuration UserJsonNet(this Configuration configuration)
+        public static Configuration UseJsonNet(this Configuration configuration)
         {
             configuration.SetDefault<IJsonSerializer, NewtonsoftJsonSerializer>(new NewtonsoftJsonSerializer());
             return configuration;
